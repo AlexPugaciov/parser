@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def news_parser(page: int, sport: str):
-    url = "https://www.sport.ru/news/"
+    url = "https://www.*****.ru/news/"
     url_temp = url
     full_news = list()
     links_list = list()
@@ -19,7 +19,7 @@ def news_parser(page: int, sport: str):
 
         for article in articles:
             link = article.find('a')['href']
-            full_url = 'https://www.sport.ru' + link
+            full_url = 'https://www.****.ru' + link
 
             if link[1:sport_len] == sport:
                 links_list.append(full_url)
